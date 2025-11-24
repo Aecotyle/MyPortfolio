@@ -1,8 +1,9 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Text } from "@react-three/drei";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import * as THREE from "three";
 import { motion, useInView } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 
 const skills = [
   { name: "Python", category: "Languages", color: "#3776ab" },
@@ -21,11 +22,15 @@ function SkillCube({ position, skill, index }: { position: [number, number, numb
   const meshRef = useRef<THREE.Mesh>(null);
   const [hovered, setHovered] = useState(false);
   
-  useFrame(({ clock }) => {
+  // throttle updates to roughly 30fps
+  useFrame((state, delta) => {
     if (meshRef.current) {
-      meshRef.current.rotation.x = clock.getElapsedTime() * 0.2 + index;
-      meshRef.current.rotation.y = clock.getElapsedTime() * 0.3 + index;
-      
+      const t = state.clock.getElapsedTime();
+      if (delta >= (1 / 30) || delta === 0) {
+        meshRef.current.rotation.x = t * 0.2 + index;
+        meshRef.current.rotation.y = t * 0.3 + index;
+      }
+
       if (hovered) {
         meshRef.current.scale.lerp(new THREE.Vector3(1.3, 1.3, 1.3), 0.1);
       } else {
@@ -100,6 +105,20 @@ function Skills3DScene() {
 export default function Skills() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isMobile = useIsMobile();
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    try {
+      const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const handler = () => setPrefersReducedMotion(mql.matches);
+      handler();
+      mql.addEventListener("change", handler);
+      return () => mql.removeEventListener("change", handler);
+    } catch (e) {
+      setPrefersReducedMotion(false);
+    }
+  }, []);
   
   const categories = [
     { name: "Programming Languages", skills: ["C", "C++", "Python", "JavaScript", "Node.js", "React.js", "SQL"] },
@@ -128,10 +147,19 @@ export default function Skills() {
         </motion.div>
         
         <div className="h-[500px] mb-16 rounded-2xl overflow-hidden">
-          <Canvas camera={{ position: [0, 0, 12], fov: 75 }}>
-            <color attach="background" args={["#0a0a0f"]} />
-            <Skills3DScene />
-          </Canvas>
+          {isMobile || prefersReducedMotion ? (
+            <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 text-center p-6">
+              <div>
+                <h3 className="text-2xl text-white mb-4">Interactive 3D preview disabled on mobile</h3>
+                <p className="text-sm text-gray-300">View full 3D experience on desktop for best performance.</p>
+              </div>
+            </div>
+          ) : (
+            <Canvas camera={{ position: [0, 0, 12], fov: 75 }} dpr={[1, 1.5]} gl={{ antialias: false }}>
+              <color attach="background" args={["#0a0a0f"]} />
+              <Skills3DScene />
+            </Canvas>
+          )}
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
