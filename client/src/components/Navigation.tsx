@@ -44,11 +44,16 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
-          >
-            TM
+          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center h-16">
+            <a href="#home" onClick={(e) => scrollToSection(e, "#home")} className="inline-flex items-center h-full">
+              <img
+                src="/assets/taha.jpg"
+                alt="Taha Moazzam"
+                aria-label="Home"
+                className="w-12 h-12 block rounded-full object-cover border-2 border-transparent hover:border-blue-400 transition-all"
+                loading="lazy"
+              />
+            </a>
           </motion.div>
           
           <div className="hidden md:flex space-x-8">

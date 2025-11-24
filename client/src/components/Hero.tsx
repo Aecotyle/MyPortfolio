@@ -10,7 +10,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-white">
-            Taha Moazzam Mern
+            Taha Moazzam
           </h1>
         </motion.div>
         
