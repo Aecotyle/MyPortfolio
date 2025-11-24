@@ -1,0 +1,95 @@
+Taha Moazzam Mern – Personal & Professional Info
+Basic Info
+
+Full Name: Taha Moazzam Mern
+
+Location: Pakistan
+
+Languages: English, Urdu
+
+Profession: Software Developer, AI Enthusiast, Startup Founder
+
+Goal: To become a public figure, gain recognition, and showcase achievements in technology, AI, and entrepreneurship.
+
+About Me
+
+I am a passionate software developer and tech entrepreneur with experience in full-stack development, AI applications, and cybersecurity solutions. I am currently part of an AI team as MTO at F&A Global, where I contribute to AI-driven projects and innovative solutions. I also founded Interaction Private Limited, a startup focused on AI and full-stack software solutions.
+
+I aim to be recognized publicly as a thought leader in AI and tech entrepreneurship and to have my work featured prominently online.
+
+Education
+
+Currently enrolled in a Bachelor’s program
+
+Strong foundation in computer science, software development, and cybersecurity.
+
+Professional Experience
+
+F&A Global – MTO, AI Team
+
+Contributing to AI projects and developing innovative solutions.
+
+Focused on practical applications of AI and machine learning in real-world problems.
+
+Interaction Private Limited – Founder & Developer
+
+Lead software development and product design.
+
+Focus on AI, full-stack development, and innovative software solutions.
+
+Skills
+Programming & Development
+
+Languages: C, C++, Python, JavaScript, Node.js, React.js, SQL
+
+Concepts: OOP, Data Structures, Algorithms, Assembly Programming
+
+Backend: Node.js, Express.js, Flask, MS SQL, PostgreSQL, MongoDB
+
+Frontend: React, React Three Fiber, Tailwind CSS, HTML, CSS, UI/UX Design
+
+AI & ML: MediaPipe, CNN, Hugging Face, IBM Watson AI
+
+Other Technical Skills
+
+DevOps & Tools: GitHub, Docker, Jenkins, Vite, Linux, cPanel, DigitalOcean, Nginx, Azure, AWS
+
+3D & Visualization: Luma AI, Three.js, GSAP
+
+Projects & Work
+
+Startup Projects: AI-powered applications, including facial symptom detection apps, customer apps for delivery services (Porter-like), and full-stack solutions.
+
+Assembly Language Games: Rock Paper Scissors, Number Guessing Game, Snake Game with DSA integration.
+
+POS System / Cargo Management System: C++ applications linked with MS SQL databases.
+
+AI Resume Analyzer: Using Hugging Face APIs.
+
+3D Interactive Website: Developed for company Interaction Private Limited using Luma AI & React Three Fiber.
+
+Achievements & Interests
+
+Founder of a software company: Interaction Private Limited.
+
+Focused on AI, full-stack development, and product innovation.
+
+Interest in public recognition and personal branding online.
+
+Passion for philosophy, cybersecurity, and entrepreneurship.
+
+Online Presence
+
+LinkedIn: Taha Moazzam Mern
+
+Instagram: Active profile (exact handle not shared)
+
+Plans to increase Google search visibility and appear on front-page results with images.
+
+Personal Traits
+
+Goal-oriented, tech-savvy, innovative, and entrepreneurial.
+
+Strong problem-solving skills in software and AI development.
+
+Active in learning and implementing emerging technologies.
