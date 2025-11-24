@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Linkedin, Instagram, Mail, MapPin, Send } from "lucide-react";
+import { Linkedin, Instagram, Mail, MapPin, Send, Github } from "lucide-react";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -10,21 +10,28 @@ export default function Contact() {
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-6 h-6" />,
-      url: "https://www.linkedin.com/in/taha-moazzam-mern",
+        url: "https://pk.linkedin.com/in/taha-moazzam-182406239",
       color: "from-blue-600 to-blue-400",
       hoverColor: "hover:shadow-blue-500/50"
     },
     {
       name: "Instagram",
       icon: <Instagram className="w-6 h-6" />,
-      url: "https://www.instagram.com",
+        url: "https://www.instagram.com/tahaxrrrr/",
       color: "from-pink-600 to-purple-600",
       hoverColor: "hover:shadow-pink-500/50"
     },
+      {
+        name: "GitHub",
+        icon: <Github className="w-6 h-6" />,
+        url: "https://github.com/Aecotyle",
+        color: "from-gray-700 to-gray-500",
+        hoverColor: "hover:shadow-gray-500/50"
+      },
     {
       name: "Email",
       icon: <Mail className="w-6 h-6" />,
-      url: "mailto:contact@interactionprivate.com",
+        url: "mailto:tahamehmood67@gmail.com",
       color: "from-green-600 to-emerald-600",
       hoverColor: "hover:shadow-green-500/50"
     }
